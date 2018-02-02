@@ -319,7 +319,8 @@ class AbstractWebApplicationTest extends TestCase
 		$this->assertSame(
 			array(
 				0 => array('name' => 'Content-Encoding', 'value' => 'gzip'),
-				1 => array('name' => 'X-Content-Encoded-By', 'value' => 'Joomla')
+				1 => array('name' => 'Vary', 'value' => 'Accept-Encoding'),
+				2 => array('name' => 'X-Content-Encoded-By', 'value' => 'Joomla')
 			),
 			$object->getHeaders()
 		);
